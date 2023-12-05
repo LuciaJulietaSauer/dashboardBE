@@ -1,0 +1,28 @@
+CREATE DATABASE IF NOT EXISTS Dashboard_DB;
+
+USE Dashboard_DB;
+
+CREATE TABLE settings (
+	id INT NOT NULL AUTO_INCREMENT, 
+	code VARCHAR(50) DEFAULT NULL, 
+	value VARCHAR(50) DEFAULT NULL, 
+	PRIMARY KEY (id)
+);
+
+INSERT INTO settings(code, value) VALUES ("cardOrder", "creationDate");
+
+CREATE TABLE columns (
+	id INT NOT NULL AUTO_INCREMENT, 
+	title VARCHAR(50) DEFAULT NULL, 
+	PRIMARY KEY (id)
+);
+
+CREATE TABLE card (
+	id INT NOT NULL AUTO_INCREMENT, 
+	name VARCHAR(50) NOT NULL DEFAULT "name", 
+	description VARCHAR(150) DEFAULT NULL, 
+	columnId INT,
+	creationDate TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY (id),
+	FOREIGN KEY (columnId) REFERENCES columns(id)
+);

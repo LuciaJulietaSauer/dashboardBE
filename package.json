@@ -1,0 +1,31 @@
+{
+  "name": "dashboard",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "test",
+    "lint": "eslint src/js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuciaJulietaSauer/dashboardBE.git"
+  },
+  "author": "Lucia Julieta Sauer",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuciaJulietaSauer/dashboardBE/issues"
+  },
+  "homepage": "https://github.com/LuciaJulietaSauer/dashboardBE#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "mysql2": "^3.6.5"
+  },
+  "devDependencies": {
+    "eslint": "^8.54.0",
+    "nodemon": "^3.0.2"
+  }
+}
